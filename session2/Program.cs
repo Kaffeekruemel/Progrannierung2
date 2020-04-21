@@ -6,7 +6,11 @@ namespace session2
     {
         static void Main(string[] args)
         {
-            
-        }
+            Chair chair = new Chair("red", "baloon");
+            chair.Print();
+
+            Sofa sofa = new Sofa ( "Green","wood");
+            sofa.Print();
+        } 
     }
 }
