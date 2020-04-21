@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace session2
 {
@@ -6,11 +7,21 @@ namespace session2
     {
         static void Main(string[] args)
         {
-            Chair chair = new Chair("red", "baloon");
-            chair.Print();
+            List<IObject> objects = new List<IObject>();
 
-            Sofa sofa = new Sofa ( "Green","wood");
-            sofa.Print();
+           objects.Add( new Chair("red", "baloon"));
+           objects.Add( new Chair("gold", "gold"));
+           objects.Add( new Sofa("blau", "teer"));
+            
+            foreach(var o in objects)
+            {
+               o.Print();
+            }
+
+            objects.ForEach(o => o.Print());
+
+            objects.Find(o => o.Color =="Red").Print();
+            
         } 
     }
 }

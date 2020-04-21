@@ -2,7 +2,7 @@ using System;
 
 namespace session2
 {
-    public class Chair : IColor, IMaterial, IPrintable
+    public class Chair : IObject
     {
         public string Color {get; set; }
 
